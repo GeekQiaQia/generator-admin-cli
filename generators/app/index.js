@@ -111,21 +111,19 @@ module.exports = class extends Generator {
       ".env.development",
       ".env.production",
       ".eslintrc.js",
-      ".gitignore",
+      // ".gitignore",
       ".prettierrc",
       "auto-imports.d.ts",
       "commitlint.config.js",
       "components.d.ts",
       "index.html",
       "LICENSE",
-      "package-lock.json",
       "package.json",
       "README-en.md",
       "README.md",
       "tsconfig.json",
       "vite.config.ts",
       "yarn.lock"
-
     ]);
   }
 
