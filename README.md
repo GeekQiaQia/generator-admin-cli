@@ -1,28 +1,28 @@
 <!--
  * @Author: GeekQiaQia
  * @Date: 2022-04-14 18:51:43
- * @LastEditTime: 2022-04-14 20:36:21
+ * @LastEditTime: 2022-04-14 21:44:15
  * @LastEditors: GeekQiaQia
  * @Description: 
  * @FilePath: /generator-admin-cli/README.md
 -->
-# generator-admin-cli
+# generator-vue3-admin-cli
 
 > vue3 admin cli  and typescript project generator
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-admin-cli using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [Yeoman](http://yeoman.io) and generator-vue3-admin-cli using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
 npm install -g yo
-npm install -g generator-admin-cli
+npm install -g generator-vue3-admin-cli
 ```
 
 Then generate your new project:
 
 ```bash
-yo admin-cli
+yo vue3-admin-cli
 ```
 
 ## Getting To Know Yeoman

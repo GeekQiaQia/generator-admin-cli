@@ -1,5 +1,5 @@
 {
-  "name": "generator-admin-cli",
+  "name": "generator-vue3-admin-cli",
   "version": "1.0.0",
   "description": "vue3.0 admin cli and typescript project generator",
   "homepage": "",
@@ -80,5 +80,8 @@
     "prepublishOnly": "npm audit"
   },
   "repository": "https://github.com/GeekQiaQia/generator-admin-cli.git",
-  "private": false
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
 }
