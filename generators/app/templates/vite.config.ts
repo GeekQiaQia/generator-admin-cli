@@ -1,10 +1,10 @@
 /*
  * @Author: GeekQiaQia
  * @Date: 2022-02-18 16:13:43
- * @LastEditTime: 2022-02-22 15:02:10
+ * @LastEditTime: 2022-05-29 16:32:55
  * @LastEditors: GeekQiaQia
  * @Description:
- * @FilePath: /vue3.0-template-admin/vite.config.ts
+ * @FilePath: /generator-admin-cli/generators/app/templates/vite.config.ts
  */
 import path from 'path'
 import { ConfigEnv, loadEnv, UserConfig } from 'vite'
@@ -13,6 +13,8 @@ import legacy from '@vitejs/plugin-legacy'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import OptimizationPersist from 'vite-plugin-optimize-persist'
+import PkgConfig from 'vite-plugin-package-config'
 
 const pathSrc = path.resolve(__dirname, 'src')
 
@@ -45,6 +47,8 @@ export default ({ mode }: ConfigEnv): UserConfig => {
       }
     },
     plugins: [
+      PkgConfig(),
+      OptimizationPersist(),
       vue(),
       AutoImport({
         resolvers: [ElementPlusResolver()]
