@@ -10,13 +10,6 @@ import path from 'path'
 import { ConfigEnv, loadEnv, UserConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import legacy from '@vitejs/plugin-legacy'
-import AutoImport from 'unplugin-auto-import/vite'
-import Components from 'unplugin-vue-components/vite'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
-import OptimizationPersist from 'vite-plugin-optimize-persist'
-import PkgConfig from 'vite-plugin-package-config'
-
-const pathSrc = path.resolve(__dirname, 'src')
 
 const CWD = process.cwd()
 
@@ -47,20 +40,7 @@ export default ({ mode }: ConfigEnv): UserConfig => {
       }
     },
     plugins: [
-      PkgConfig(),
-      OptimizationPersist(),
       vue(),
-      AutoImport({
-        resolvers: [ElementPlusResolver()]
-      }),
-      Components({
-        resolvers: [
-          ElementPlusResolver({
-            importStyle: 'sass'
-          })
-        ],
-        dts: path.resolve(pathSrc, 'components.d.ts')
-      }),
       legacy({
         targets: ['ie >= 11'],
         additionalLegacyPolyfills: ['regenerator-runtime/runtime']
