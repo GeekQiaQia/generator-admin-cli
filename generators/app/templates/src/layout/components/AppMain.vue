@@ -21,7 +21,7 @@
 
     <router-view v-if="!$route.meta.keepAlive" v-slot="{ Component }">
       <transition name="fade" mode="out-in">
-        <keep-alive>
+        <keep-alive :include="$route.name">
           <component :is="Component" :key="$route.path" />
         </keep-alive>
       </transition>
